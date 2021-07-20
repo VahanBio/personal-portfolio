@@ -24,10 +24,30 @@ function animations() {
 }
 
 function darkModeToggler() {
+    function setCookie(cookie) {
+        let d = new Date();
+        d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000));
+        document.cookie = `theme=${cookie}; expires=${d.toUTCString()}; path=/`;
+    }
+
+    function getCookie(cookie) {
+        let a = `; ${document.cookie}`.match(`;\\s*${cookie}=([^;]+)`);
+        return a ? a[1] : '';
+    }
     let switchToggle = document.querySelector('.switch');
+    let body = document.querySelector('body');
     switchToggle.addEventListener('click', () => {
-        document.body.classList.toggle('darkMode')
+        body.classList.toggle('darkMode')
+        if (body.classList.contains('darkMode')) {
+            setCookie("dark");
+        } else if (!body.classList.contains('darkMode')) {
+            setCookie("default");
+        }
     })
+    window.onload = () => {
+        document.body.classList.add((getCookie('theme') === "default" ? "default" : "darkMode"));
+
+    }
 }
 
 function locations() {
