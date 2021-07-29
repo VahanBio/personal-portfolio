@@ -97,6 +97,7 @@ header {
           box-shadow: inset 4px 4px 4px white, inset -4px -4px 4px #c3c1c6;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  z-index: 1;
 }
 
 .switch .moon {
@@ -330,13 +331,13 @@ header {
           transform: scale(1);
 }
 
-.industrious-pic {
-  background-image: url("../images/project_templates/industrious.JPG");
+.guide-pic {
+  background-image: url("../images/project_templates/theGuide.JPG");
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
 
-.industrious-pic:hover {
+.guide-pic:hover {
   -webkit-transform: scale(1);
           transform: scale(1);
 }

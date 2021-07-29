@@ -62,7 +62,7 @@ function locations() {
         window.open('https://github.com/VahanBio/Blooms-Tea')
     });
     industrious.addEventListener('click', () => {
-        window.open('https://github.com/VahanBio/Industrious-Template')
+        window.open('https://github.com/VahanBio/theGuide-template')
     })
 }
 

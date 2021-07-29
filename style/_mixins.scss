@@ -1,0 +1,26 @@
+@mixin uppercase-weight($transform, $weight, $fsize) {
+    text-transform: $transform;
+    font-weight: $weight;
+    font-size: $fsize;
+}
+
+@mixin justify-flex($jcontent) {
+    display: flex;
+    justify-content: $jcontent;
+}
+
+@mixin flex($acontent, $jcontent, $aitems) {
+    display: flex;
+    align-content: $acontent;
+    justify-content: $jcontent;
+    align-items: $aitems;
+}
+
+@mixin wrap-column-flex($fwrap, $f-dir) {
+    flex-wrap: $fwrap;
+    flex-direction: $f-dir;
+}
+
+@mixin dark-shadow {
+    box-shadow: -40px 40px 20px rgba(143, 143, 143, 0.678);
+}
